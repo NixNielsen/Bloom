@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+    <!--Disse meta'er, er for vores SEO-->
+    <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    <meta name="keywords" content="yoga, yogamassage, samtaleterapuet, coach, coaching, samtaleterapi, terpi, spirituelle, spirituel coach, meditation, åndedræt" />
+    <meta name="description" content="Skal vi sammen opnå dine spirituelle mål? Eller styrke dit personlige lederskab i dit eget liv? spirituel coach og samtaleterapuet, Jasmin Lynge, fokuserer på at DU kan få det bedre. Individuel eller grupperhold. " />
+    <!---------------------------------->
+
+    <link rel="stylesheet" href="stylesheets/style.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script>
+        $(function(){
+            $(".toggle").on("click", function(){
+
+                if($(".item").hasClass("active")){
+                    $(".item").removeClass("active");/*hvis klassen allerede er "active", bliver den fjernet*/
+                }
+                else{
+                    $(".item").addClass("active");/*hvis ik den har, addes den*/
+                }
+            })
+        });
+    </script>
+
+    <title>Velkommen til Bloom - Yoga, Meditation og den spirituelle verden!</title>
+</head>
+<body>
+    <header>  
+        <a href="index.html"><img src="images/logocircle.png" alt="bloom-logo" id="logocircle"></a>
+        
+        <nav>
+        <ul class="menu">
+            <li class="item"><a href="#">Hjem</a></li>
+            <li class="item"><a href="yogaPage.html">Yoga og yogamassage </a></li>
+            <li class="item"><a href="samtalePage.html">Online sametaleterpi</a></li>
+            <li class="item"><a href="meditationPage.html">Meditation og åndedræt</a></li>
+            <li class="toggle"><span class="bars"></span></li>
+        </ul>
+    </nav>
+    </header>
+
+    <article id="banner">
+       <h1>Genopdag din naturlige sindstilstand. Jeg vil hjælpe med at få dig derhen</h1>
+    </article>
+    
+    <main>
+        <section class="box">
+            <h1>Om Mig</h1>
+            <p> Jeg har arbejdet med mennesker i 3 år. Vi arbejder sammen med at løse traume, 
+                søvnløshed, angst, depression, stress og generelt uro i krop og sind.
+                Dertil bruger jeg forskellige værktøjer, som f.eks. yoga, massage, 
+                åndedrætsøvelser, meditation, samtaler, tapping (EFT).
+                <br>
+                <br>
+                Jeg tilbyder yoga, meditation og åndedræt sessioner, 
+                og sametaleterpi. Klik på “book mig” for at læse mere om dem.
+                <br>
+                <br>
+                Jeg har studeret yoga hos LagoYoga, og studeret 200 hour professional yoga teacher 
+                training hos dem. Udover det har jeg læst søvncoach på At Work Skolen.
+                <br>
+                <br>
+                <h6>Jasmin Lynge</h6>
+                <br>
+            </p>
+        </section>
+
+        <section id="box2">
+            <div id="BMBox">
+                <button id="BM"><a href="sessioner.html">BOOK SESSION</a> </button>
+            </div>
+        </section>
+    </main>
+
+    <article id="vision">
+        <p>“ Min vision er at  hjælper andre, om det er med at finde ro i kroppen, eller ro i sindet ”
+            <br>
+            <br>
+        </p>
+            <img src="images/lotus.png" alt="lotus-yoga-meditaion-spirituel-blomst" id="lotus">
+    </article>
+
+    <footer>
+        <section class="infoBox">
+            <a href="https://goo.gl/maps/u6K1MpdnTepGcjTN6">Lille Kirkestræde 3, Copenhagen, Denmark</a>
+        </section>
+
+        <section class="infoBox">
+           <a href="MAILTO: jl.bloom.dk@gmail.com">jl.bloom.dk@gmail.com</a>
+        </section>
+
+        <section class="infoBox">
+            <a href="https://www.instagram.com/yoginbalance/?fbclid=IwAR1wL4LaVRZu_f4pWL-SlXNDpjbh8Ey29Xxx8CuDOVX_aakBtzgyC1mdwtE" target="_blank"><img src="images/icon _instagram_.png" alt="insta"></a>
+            <a href="https://www.facebook.com/Bloombyjl" target="_blank"><img src="images/icon _facebook squared_.png" alt="facebook"></a>
+        </section>
+    </footer>
+</body>
+</html>

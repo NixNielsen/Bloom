@@ -1,0 +1,302 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 
+    1fr
+    repeat(4,minmax(0,272px))
+    1fr 
+;
+grid-gap: 0px; 
+grid-template-rows: 
+    70px
+    95px
+    1fr
+    140px
+    120px
+;
+grid-template-areas: 
+    "header header header header header header"
+    "title title title title title title"
+    "main main main main main main"
+    "btn btn btn btn btn btn"
+    "footer footer footer footer footer footer"
+    ;
+}    
+
+/*HEADER CONTENT*/
+header {
+    grid-area: header;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #80A682;
+}
+
+header #logocircle{
+    width: 55px;
+    padding-left: 10px;
+}
+
+ul{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+    color: #FFF;
+}
+a:hover{
+    text-decoration: underline 1px;
+}
+
+.menu li{
+    font-size: 16px;
+    padding: 15px 5px;
+}
+.menu li a{
+    display: block;
+}
+
+
+
+/*mobile menu*/
+.menu{ 
+    height: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: right;
+    align-items: center;
+    position: relative;
+    background-color: #80A682;
+}
+.toggle{
+    order: 1; 
+    height: 30px;
+}
+.item.button{
+    order: 2;
+}
+.item{
+    background-color: #759276;
+    width: 100%;
+    text-align: center;
+    order: 3;
+    display: none;
+}
+.item.active{
+    display: block;
+}
+.toggle {
+    cursor: pointer;
+}
+
+
+/*BRUGER MENU DESIGN*/
+.bars{
+    background-color: #FFF;
+    display: inline-block;
+    position: relative;
+    height: 2px;
+    width: 20px;
+}
+
+.bars::before,.bars::after{
+    background-color: #FFF;
+    display: inline-block;
+    position: absolute;
+    content: "";
+    height: 2px;
+    width: 20px;
+}
+.bars::before{
+    top: 7px;
+}
+.bars::after{
+    top: -7px;
+}
+
+
+
+/*MAIN CONTENT*/
+#titleContainer {
+    grid-area: title;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: #CFBF96;
+}
+
+main {
+    grid-area: main;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#paragrafContainer{
+    color: #353535;
+    width: auto;
+    margin: 30px;
+}
+main img {
+    margin: 30px;
+    width: 90%;
+}
+
+
+#btnContainer {
+    grid-area: btn;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#btn {
+    background-color: #80A682;
+    border-radius: 8px;
+    border: transparent;
+    padding: 20px 25px;
+    filter: drop-shadow(0px 4px 4px rgba(87, 87, 87, 0.25));
+    display: inline-block;
+}
+#btn a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+#btn:hover{
+    cursor: pointer;
+    background-color: #68886b;
+}
+
+
+
+
+/*FOOTER CONTENT*/
+footer {
+    grid-area: footer;
+    background-color: #45382D;
+    color: #FFF;
+
+    font-size: small;
+
+    border-left: 10px solid #2F261E;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 2%;
+    width: auto;
+}
+
+.infoBox {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    height: 80%;
+}
+.infoBox img {
+    margin-left: 10px;
+    width: 25px;
+}
+
+
+
+
+
+
+
+@media all and (min-width: 571px){
+   
+    main img {
+        margin: 30px;
+        width: 60%;
+    }
+
+}
+
+
+@media all and (min-width: 729px){
+    body {
+    grid-template-rows: 
+        70px
+        95px
+        1fr
+        300px /*ændring af btn area*/
+        120px
+    ;
+    }   
+    
+    #titleContainer {
+        justify-content: left;
+        padding-left: 30px;
+    }
+    
+    main {
+        grid-area: main;
+        
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items:self-start;
+    }
+    #paragrafContainer{
+        width: 50%;
+        font-size: large;
+    }
+    main img {
+        margin: 30px;
+        width: auto;
+    }
+    
+    #btnContainer {
+        grid-area: btn;
+    
+        justify-content: right;
+        padding-right: 30px;
+    }
+}
+
+
+/*desktop menu*/
+@media all and (min-width: 934px){
+    .menu {
+        background-color: #80A682;
+    }
+
+    .item{
+        display: block;
+        width: auto; 
+        background-color: #80A682;
+    }
+    .toggle{
+        display: none;
+    }
+   
+    .menu li{
+        padding: 15px 35px;
+    }
+    .menu li.button{
+        padding-right: 0;
+    }
+
+
+}
+
+@media all and (min-width: 988px){
+    footer {   
+        justify-content: space-between;
+        flex-direction: row;
+    }
+}
+
+
+

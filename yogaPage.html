@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+    <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+   
+    <link rel="stylesheet" href="stylesheets/yoga.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script>
+        $(function(){
+            $(".toggle").on("click", function(){
+
+                if($(".item").hasClass("active")){
+                    $(".item").removeClass("active");/*hvis klassen allerede er "active", bliver den fjernet*/
+                }
+                else{
+                    $(".item").addClass("active");/*hvis ik den har, addes den*/
+                }
+            })
+        });
+    </script>
+
+    <title>Velkommen til Bloom - Yoga, Meditation og den spirituelle verden!</title>
+</head>
+<body>
+    <header>  
+        <a href="index.html"><img src="images/logocircle.png" alt="bloom-logo" id="logocircle"></a>
+        
+        <nav>
+        <ul class="menu">
+            <li class="item"><a href="index.html">Hjem</a></li>
+            <li class="item"><a href="yogaPage.html">Yoga og yogamassage </a></li>
+            <li class="item"><a href="samtalePage.html">Online sametaleterpi</a></li>
+            <li class="item"><a href="meditationPage.html">Meditation og åndedræt</a></li>
+            <li class="toggle"><span class="bars"></span></li>
+        </ul>
+    </nav>
+    </header>
+
+    <section id="titleContainer">
+        <h1>Yoga og yogamassage</h1>
+    </section>
+
+    <main>
+        <article id="paragrafContainer">
+            <h4>Hvad er yoga?</h4>
+            <p>
+                Yoga består af øvelser, åndedrætsteknikker og forskellige kropsstillinger, som styrker med sindsro, kontrol over din krop og tanker
+                samtidig med, at lindre smerter i led.
+                <br>
+                <br>
+                <br>
+            </p>
+               
+            
+            <h4>Kom igang</h4>
+            <p>
+                Jeg tilbyder både yoga 1:1, og i holdundervisning. 
+                Det tager omkring 2-3 timer. 
+                Her fokuserer vi på at opnå spiritualitet og ro i sindet.
+                <br>
+                <br>
+                Jeg tilbyder også yoga massage, som bidrager til bevægeapparatetes dele; muskler, led m.m.  
+                Yogamassage tager omkring en time, og der er vi 1:1. 
+                <br>
+                <br>
+                Pris: 250kr
+            </p>
+        </article>
+
+        <img src="images/yoga.png" alt="yoga-billede">
+
+    </main>
+
+    <section id="btnContainer">
+        <button id="btn"><a href="book.html">BOOK SESSION</a></button>
+    </section>
+
+    <footer>
+        <section class="infoBox">
+            <a href="https://goo.gl/maps/u6K1MpdnTepGcjTN6">Lille Kirkestræde 3, Copenhagen, Denmark</a>
+        </section>
+
+        <section class="infoBox">
+           <a href="MAILTO: jl.bloom.dk@gmail.com">jl.bloom.dk@gmail.com</a>
+        </section>
+
+        <section class="infoBox">
+            <a href="https://www.instagram.com/yoginbalance/?fbclid=IwAR1wL4LaVRZu_f4pWL-SlXNDpjbh8Ey29Xxx8CuDOVX_aakBtzgyC1mdwtE" target="_blank"><img src="images/icon _instagram_.png" alt="insta"></a>
+            <a href="https://www.facebook.com/Bloombyjl" target="_blank"><img src="images/icon _facebook squared_.png" alt="facebook"></a>
+        </section>
+    </footer>
+</body>
+</html>

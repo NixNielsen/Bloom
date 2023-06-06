@@ -1,0 +1,338 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 
+    1fr
+    repeat(4,minmax(0,272px))
+    1fr 
+;
+grid-gap: 0px; 
+grid-template-rows: 
+    70px
+    270px
+    1fr
+    140px
+    120px
+;
+grid-template-areas: 
+    "header header header header header header"
+    "banner banner banner banner banner banner"
+    "info info info info info info"
+    "vision vision vision vision vision vision"
+    "footer footer footer footer footer footer"
+    ;
+}    
+
+/*HEADER CONTENT*/
+header {
+    grid-area: header;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #80A682;
+}
+
+header #logocircle{
+    width: 55px;
+    padding-left: 10px;
+}
+
+ul{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+    color: #FFF;
+}
+a:hover{
+    text-decoration: underline 1px;
+}
+
+.menu li{
+    font-size: 16px;
+    padding: 15px 5px;
+}
+.menu li a{
+    display: block;
+}
+
+
+
+/*mobile menu*/
+.menu{ 
+    height: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: right;
+    align-items: center;
+    position: relative;
+    background-color: #80A682;
+}
+.toggle{
+    order: 1; 
+    height: 30px;
+}
+.item.button{
+    order: 2;
+}
+.item{
+    background-color: #759276;
+    width: 100%;
+    text-align: center;
+    order: 3;
+    display: none;
+}
+.item.active{
+    display: block;
+}
+.toggle {
+    cursor: pointer;
+}
+
+
+/*BRUGER MENU DESIGN*/
+.bars{
+    background-color: #FFF;
+    display: inline-block;
+    position: relative;
+    height: 2px;
+    width: 20px;
+}
+
+.bars::before,.bars::after{
+    background-color: #FFF;
+    display: inline-block;
+    position: absolute;
+    content: "";
+    height: 2px;
+    width: 20px;
+}
+.bars::before{
+    top: 7px;
+}
+.bars::after{
+    top: -7px;
+}
+
+
+/*Banner og cirkel del*/
+#banner {
+    grid-area: banner;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    background-image: url("../images/banner.png");
+    background-position-x: center;
+}
+#banner h1{
+    color: #FFF;
+    font-size: 2rem;
+    font-weight:lighter;
+    font-style: oblique;
+    width: 100%;
+}
+
+
+
+/*MAIN CONTENT*/
+main {
+    grid-area: info;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 3%;
+}
+.box{
+    padding-top: 30px;
+    width: 100%;
+    line-height: 25px;
+}
+h1 {
+    color: #CFBF96;
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight:500;
+}
+h6 {
+    font-weight:lighter;
+
+    color: #585858;
+    text-align: center;
+}
+p {
+    color: #353535;
+}
+
+
+#box2 {
+    padding-bottom: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+#BMBox {
+    background-color: transparent;
+}
+#BM {
+    background-color: #80A682;
+    border-radius: 8px;
+    border: transparent;
+    padding: 10px 12px;
+    filter: drop-shadow(0px 4px 4px rgba(87, 87, 87, 0.25));
+    display: inline-block;
+}
+#BM a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+/*Knap detalje*/
+button:after {
+    color: #fff;
+    content: '»' ;
+    opacity: 0;  
+    transition: 0.5s;
+}
+button:hover:after {
+    opacity: 1;
+}
+
+
+
+/*Vision del*/
+#vision {
+    grid-area: vision;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #F7F2EB;
+    color: #292D32;
+
+    font-style: oblique;
+}
+
+#lotus {
+    width: 34px;
+}
+
+
+/*FOOTER CONTENT*/
+footer {
+    grid-area: footer;
+    background-color: #45382D;
+    color: #FFF;
+
+    font-size: small;
+
+    border-left: 10px solid #2F261E;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 2%;
+    width: auto;
+}
+
+.infoBox {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    height: 80%;
+}
+.infoBox img {
+    margin-left: 10px;
+    width: 25px;
+}
+
+
+
+
+/*desktop menu*/
+@media all and (min-width: 934px){
+    .menu {
+        background-color: #80A682;
+    }
+
+    .item{
+        display: block;
+        width: auto; 
+        background-color: #80A682;
+    }
+    .toggle{
+        display: none;
+    }
+   
+    .menu li{
+        padding: 15px 35px;
+    }
+    .menu li.button{
+        padding-right: 0;
+    }
+}
+
+
+@media all and (min-width: 988px){
+    
+    #banner h1{
+        color: #FFF;
+        font-size: 2rem;
+        font-weight:lighter;
+        font-style: oblique;
+        width: 70%;
+    }
+    
+    
+    
+    main {
+        flex-direction: row;
+        height: 100%;
+    }
+
+    .box{
+        width: 50%;
+        font-size: larger;
+    }
+
+    #box2 {
+        width: 50%;
+        display:flex;
+        justify-content: right;
+    }
+    #BMBox {
+        display: flex;
+        align-items: flex-end;
+    }
+    #BM {
+        padding: 15px 25px;
+    }
+
+
+    #vision{
+        font-size: large;
+    }
+    #vision p {
+        width: 50%;
+    }
+
+    #lotus {
+        width: 46px;
+    }
+
+
+    footer {   
+        justify-content: space-between;
+        flex-direction: row;
+    }
+}

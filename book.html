@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheets/book.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script>
+        $(function(){
+            $(".toggle").on("click", function(){
+
+                if($(".item").hasClass("active")){
+                    $(".item").removeClass("active");/*hvis klassen allerede er "active", bliver den fjernet*/
+                }
+                else{
+                    $(".item").addClass("active");/*hvis ik den har, addes den*/
+                }
+            })
+        });
+    </script>
+
+    <title>Velkommen til Booking</title>
+</head>
+<body>
+    
+    <header>  
+        <nav>
+        <ul class="menu">
+            <li class="item"><a href="index.html">Hjem</a></li>
+            <li class="item"><a href="yogaPage.html">Yoga og yogamassage </a></li>
+            <li class="item"><a href="samtalePage.html">Online sametaleterpi</a></li>
+            <li class="item"><a href="meditationPage.html">Meditation og åndedræt</a></li>
+            <li class="toggle"><span class="bars"></span></li>
+        </ul>
+    </nav>
+    </header>
+
+    <main>
+        <article id="container">
+            <section class="elem-group">
+                <label for="name">Dit Navn:</label>
+                <input type="text" class="box" name="visitor_name" placeholder="John Doe" required> <!--required betyder at man SKAL udfylde feltet.-->
+            </section>
+
+            <section class="elem-group">
+                <label for="email">Din E-mail:</label>
+                <input type="email" class="box" name="visitor_email" placeholder="john.doe@email.com" required>
+            </section>
+
+            <section class="elem-group">
+                <label for="phone">Dit tlf. nr.:</label>
+                <input type="tel" class="box" name="visitor_phone" placeholder="12-23-34-45" required>
+            </section>
+
+            <section class="elem-group">
+                <label for="dato">Vælg dato:</label>
+                <input type="date" class="box" name="dato" required>
+            </section>
+
+            <section class="elem-group">  <!--Dropdown liste-->
+                <label for="service">Vælg Service:</label>
+                <select id="service" name="service" required>
+                    <option value="">Vælg Service fra liste</option> 
+                    <option>Yoga og yogamassage</option>  <!--Options man kan vælge imellem-->
+                    <option>Online sametaleterpi</option>
+                    <option>Meditation og åndedræt</option>
+                </select>
+            </section>
+
+            <button id="BM">Book Sessionen</button>
+
+        </article>
+    </main>
+
+
+    <footer>
+        <section class="infoBox">
+            Lille Kirkestræde 3, 
+            Copenhagen, Denmark
+        </section>
+
+        <section class="infoBox">
+            jl.bloom.dk@gmail.com
+        </section>
+
+        <section class="infoBox">
+            <a href="https://www.instagram.com/yoginbalance/?fbclid=IwAR1wL4LaVRZu_f4pWL-SlXNDpjbh8Ey29Xxx8CuDOVX_aakBtzgyC1mdwtE" target="_blank"><img src="images/icon _instagram_.png" alt="insta"></a>
+            <a href="https://www.facebook.com/Bloombyjl" target="_blank"><img src="images/icon _facebook squared_.png" alt="facebook"></a>
+        </section>
+    </footer>
+</body>
+</html>

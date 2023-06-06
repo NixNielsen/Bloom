@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+    <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+   
+    <link rel="stylesheet" href="stylesheets/meditation.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script>
+        $(function(){
+            $(".toggle").on("click", function(){
+
+                if($(".item").hasClass("active")){
+                    $(".item").removeClass("active");/*hvis klassen allerede er "active", bliver den fjernet*/
+                }
+                else{
+                    $(".item").addClass("active");/*hvis ik den har, addes den*/
+                }
+            })
+        });
+    </script>
+
+    <title>Velkommen til Bloom - Yoga, Meditation og den spirituelle verden!</title>
+</head>
+<body>
+    <header>  
+        <a href="index.html"><img src="images/logocircle.png" alt="bloom-logo" id="logocircle"></a>
+
+        <nav>
+        <ul class="menu">
+            <li class="item"><a href="index.html">Hjem</a></li>
+            <li class="item"><a href="yogaPage.html">Yoga og yogamassage </a></li>
+            <li class="item"><a href="samtalePage.html">Online sametaleterpi</a></li>
+            <li class="item"><a href="meditationPage.html">Meditation og åndedræt</a></li>
+            <li class="toggle"><span class="bars"></span></li>
+        </ul>
+    </nav>
+    </header>
+
+    <section id="titleContainer"><h1>Meditation og åndedræt</h1></section>
+
+    <article id="info">
+        <p>
+            Meditation mental hjælpene praksis, der fokusere på tilstanden af mental klarhed og indre ro. 
+            Det er en metode hvor den individuelle kan træne sindet og skabe en dybere forbindelse til sig selv og omverden. 
+            Ved at træne sindet til meditation, kan man opnå en række af fordele. Nogle oplever at det har reduceret deres stress og angst, 
+            andre har forbedret koncentration og fokus, samt kan det bidrage til øget følelse af ro og afslapning.
+            Der er mange gode kvaliteter ved at meditere, for det kan markant forbedre ens søvnkvalitet og immunsystemet.
+            <br>
+            <br>
+            Jeg tilbyder meditation og fokus på åndedrættet. 
+            Her kan vi være både 1:1, eller i hold. 
+            Det tager 1 time, og vi opnår roligehed og kontrol over vores krop. 
+            <br>
+            <br>
+            Pris: 250kr 
+        </p>
+    </article>
+
+
+    <article id="videoContainer">
+        <section class="videoBoxes">
+            <video width="100%" height="200px" controls>
+                <source src="mp4/Meditation1.mp4" type="video/mp4">
+            </video>
+        </section>
+        
+        <section class="videoBoxes">
+            <video width="100%" height="200px" controls>
+                <source src="mp4/Meditation1.mp4" type="video/mp4">
+            </video>
+        </section>
+    </article>
+
+
+    <section id="btnContainer">
+        <button class="btn" id="aboner"><a href="#">ABONÉR</a></button>
+
+        <button class="btn" id="book"><a href="book.html">BOOK SESSION</a></button>
+    </section>
+
+
+    <footer>
+        <section class="infoBox">
+            <a href="https://goo.gl/maps/u6K1MpdnTepGcjTN6">Lille Kirkestræde 3, Copenhagen, Denmark</a>
+        </section>
+
+        <section class="infoBox">
+           <a href="MAILTO: jl.bloom.dk@gmail.com">jl.bloom.dk@gmail.com</a>
+        </section>
+
+        <section class="infoBox">
+            <a href="https://www.instagram.com/yoginbalance/?fbclid=IwAR1wL4LaVRZu_f4pWL-SlXNDpjbh8Ey29Xxx8CuDOVX_aakBtzgyC1mdwtE" target="_blank"><img src="images/icon _instagram_.png" alt="insta"></a>
+            <a href="https://www.facebook.com/Bloombyjl" target="_blank"><img src="images/icon _facebook squared_.png" alt="facebook"></a>
+        </section>
+    </footer>
+</body>
+</html>
